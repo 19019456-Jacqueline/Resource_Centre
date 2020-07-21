@@ -52,6 +52,15 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		assertNotNull("Test if there is valid Chromebook arraylist to add into", chromebookList);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		assertEquals("Test if Chromebook arraylist size == 1", 1, chromebookList.size());
+		
+		assertSame("Check item added is same as the first item in list", cb1, chromebookList.get(0));
+		
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test arraylist size is 2", 2, chromebookList.size());
 	}
 	
 	@Test
@@ -82,6 +91,7 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 	}
 
 	@Test
