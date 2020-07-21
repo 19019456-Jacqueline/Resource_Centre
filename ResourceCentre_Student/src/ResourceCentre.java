@@ -173,16 +173,11 @@ public class ResourceCentre {
 	public static Chromebook inputChromebook() {	
 		Chromebook cb =null;
 		// write your code here
-		String tag = Helper.readString("Enter ")
-		if (cb == null) {
-			
-		}
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
-		
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -256,19 +251,10 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
 		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) 
-					&& chromebookList.get(i).getIsAvailable() == false){
-				chromebookList.get(i).setIsAvailable(true);
-				chromebookList.get(i).setDueDate("");
-				isReturned = true;
-			}
-		}
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
-		
 		// write your code here
 	}
 

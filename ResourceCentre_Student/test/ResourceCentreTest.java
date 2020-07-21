@@ -82,7 +82,6 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
 	}
 
 	@Test
@@ -96,7 +95,6 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
 	}
 	
 	@Test
@@ -109,12 +107,6 @@ public class ResourceCentreTest {
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		assertNotNull("Test if there is a vaild chromebooklist arraylist to return the chromebook to", chromebookList);
-		String loanedChromebooks = ResourceCentre.retrieveAllChromebook(chromebookList);
-		String testOutput = "";
-		assertEquals("Check if chromebook list has any missing chromebooks", testOutput, loanedChromebooks);
-		ResourceCentre.doReturnChromebook(chromebookList, cb1);
-		
 	}
 	
 	@After
