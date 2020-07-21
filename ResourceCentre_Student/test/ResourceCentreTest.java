@@ -95,26 +95,24 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void retrieveAllChromebookTest() {
-
+		//If there is a vaild chromebooklist
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
-		
-
-				String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
-				String testOutput = "";
-				assertEquals("Check that ViewAllCamcorderlist", testOutput, allChromebook);
-				
-
+		//Check the chromebooklist
+		String chromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllCamcorderlist", testOutput, chromebook);
+		//Check that items added into array will increase the size of the array
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		ResourceCentre.addChromebook(chromebookList, cb2);
-		assertEquals("Test if that Camcorder arraylist size is 2?", 2, chromebookList.size());
+		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
 		
 
-		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		chromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
 		
 		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0011", "My Google Chromebook 1st", "Mac OS");
 		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0012", "SAMSUNG Chromebook 4+", "Win 10");
 	
-		assertEquals("Check that ViewAllCamcorderlist", testOutput, allChromebook);
+		assertEquals("Check that ViewAllCamcorderlist", testOutput, chromebook);
 		//fail("Not yet implemented");
 		// write your code here
 		//branch 'master' of https://github.com/19019456-Jacqueline/Resource_Centre.git
@@ -137,12 +135,25 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		//
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Check if the chromebook is vaild 
+		assertNotNull("Test if there is a vaild Chromebook arrayList to add to ", chromebookList);
+		//If the item is not in the list
+		String chromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllChromebooklist", testOutput, chromebook);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+
+		chromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		
 	}
 	
 	@After
